@@ -1,7 +1,6 @@
 from sympy import *
 import numpy as np
 import matplotlib.pyplot as plt
-import math
 
 
 def fact(x):
@@ -31,7 +30,7 @@ class AproxSerie():
 
 
 
-    def draw(self, i, txt="fun",gen=0):
+    def print(self, i, txt="fun",gen=0):
         if gen:
             plt.figure()
         plt.plot(self.x, self.fns[i].y, label=txt)

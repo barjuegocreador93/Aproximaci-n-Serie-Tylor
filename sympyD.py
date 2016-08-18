@@ -8,18 +8,18 @@ from sympy.parsing.sympy_parser import parse_expr
 class SympyDer():
     def __init__(self,y,x,n,xmin=0,xmax=0,a=0):
 
-        file=raw_input("nombre del archivo: ")
+        file=input("nombre del archivo: ")
         AproxSerieInit=int(input("Quiere realizar AproxSerie(1/0): "))
         if AproxSerieInit:
             xmin=float(input("xmiin: "))
             xmax = float(input("xmiin: "))
             a = float(input("a: "))
-        y = parse_expr(raw_input("y: "))
-        n = int(input("n: "))
+            y = parse_expr(input("y: "))
+            n = int(input("n: "))
         self.fns = [y]
         for i in range(n):
             self.fns.append(diff(self.fns[i], x))
-        content="from AproxError import AproxSerie, plt\nfrom numpy import *\n"
+        content="from AproxError import *\n"
         j=0
         if AproxSerieInit:
             self.arrf="["
