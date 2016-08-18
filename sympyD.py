@@ -14,12 +14,12 @@ class SympyDer():
             xmin=float(input("xmiin: "))
             xmax = float(input("xmiin: "))
             a = float(input("a: "))
-            y = parse_expr(input("y: "))
-            n = int(input("n: "))
+        y = parse_expr(input("y: "))
+        n = int(input("n: "))
         self.fns = [y]
         for i in range(n):
             self.fns.append(diff(self.fns[i], x))
-        content="from AproxError import *\n"
+        content="from AproxError import AproxSerie,plt,fact\nfrom numpy import *\n"
         j=0
         if AproxSerieInit:
             self.arrf="["
